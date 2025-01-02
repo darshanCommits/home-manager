@@ -1919,6 +1919,34 @@ in {
           Cavalier is a GUI wrapper around the Cava audio visualizer.
         '';
       }
+
+      {
+        time = "2025-01-01T15:31:15+00:00";
+        condition = hostPlatform.isLinux;
+        message = ''
+          The 'systemd.user.startServices' option now defaults to 'true',
+          meaning that services will automatically be restarted as needed when
+          activating a configuration.
+
+          Further, the "legacy" alternative has been removed and will now result
+          in an evaluation error if used.
+
+          The "suggest" alternative will remain for a while longer but may also
+          be deprecated for removal in the future.
+        '';
+      }
+
+      {
+        time = "2025-01-01T23:16:35+00:00";
+        message = ''
+          A new module is available: 'programs.ghostty'.
+
+          Ghostty is a terminal emulator that differentiates itself by being
+          fast, feature-rich, and native. While there are many excellent
+          terminal emulators available, they all force you to choose between
+          speed, features, or native UIs. Ghostty provides all three.
+        '';
+      }
     ];
   };
 }
